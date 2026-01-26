@@ -1,0 +1,143 @@
+<details class="project-item">
+    <summary>
+        <img src="https://img.youtube.com/vi/5dwW4Qi5M3Q/mqdefault.jpg" alt="" class="thumbnail">
+        <span class="title">Training Legged Robot Controller with Reinforcement Learning</span>
+    </summary>
+    <div class="project-content">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/5dwW4Qi5M3Q" title="Legged Robot RL" allowfullscreen></iframe>
+        </div>
+        <p>Modeling and controlling a legged robot is very difficult because the robot has high degree of freedom and it is very hard to model contact force between the foot and the ground. Reinforcement learning can be effectively applied to this kind of task. In this project, I trained a policy for controlling a legged robot using reinforcement learning. The robot with trained policy can follow the velocity/position command even in the slippery rough terrain.</p>
+        
+        <h4>Training Overview</h4>
+        <p>The agent was trained in RaiSim/Isaac Gym environment using Proximal Policy Optimization (PPO) algorithm. Joint states, IMU data, terrain depth near the robot were provided as observation.</p>
+        
+        <h4>Reward Shaping and Curriculum Learning</h4>
+        <p>To prevent the agent from stuck into the local minimum and to guide the agent to learn the desired policy, various reward functions were defined and tuned. Curriculum adjusting terrain roughness, friction coefficient, and reward function weight was designed to increase hardness of environment gradually.</p>
+        
+        <h4>Domain Randomization</h4>
+        <p>To increase robustness of the policy, domain randomization technique was used. Friction coefficient, foot size, initial state were randomized. Also, noises were added to observations.</p>
+    </div>
+</details>
+
+<details class="project-item">
+    <summary>
+        <img src="https://img.youtube.com/vi/mhkzUAEELQ8/mqdefault.jpg" alt="" class="thumbnail">
+        <span class="title">A Morphing Quadrotor that Can Optimize Morphology for Transportation</span>
+    </summary>
+    <div class="project-content">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/mhkzUAEELQ8" title="Morphing Quadrotor" allowfullscreen></iframe>
+        </div>
+        <img src="assets/mq_project/mq_fig1.jpg" alt="Morphing Quadrotor" class="project-image">
+        <p>I developed a morphing quadrotor that can optimize its morphology for transportation. It can change its rotor positions depending on the payload weight and the position, maximizing stability and energy efficiency. In this project, I designed hardware and electronics, developed controller, and conducted a real-world experiment.</p>
+        
+        <h4>Parameter Estimation</h4>
+        <div class="image-text-row">
+            <img src="assets/mq_project/mq_fig2.png" alt="Parameter Estimation" style="width: 200px;">
+            <div class="text-content">
+                <p>When a payload is loaded on a drone, its weight, center of gravity position, and inertia tensor changes. These parameters should be estimated in real-time for the stable flight control and the optimal morphology calculation.</p>
+            </div>
+        </div>
+        
+        <h4>Optimal Morphology Calculation</h4>
+        <div class="image-text-row">
+            <img src="assets/mq_project/mq_fig3.png" alt="Optimal Morphology Calculation" style="width: 200px;">
+            <div class="text-content">
+                <p>The optimal morphology was determined by calculating morphology that maximizes energy efficiency factor and controllability factor.</p>
+            </div>
+        </div>
+        
+        <h4>Adaptive Control</h4>
+        <div class="image-text-row">
+            <img src="assets/mq_project/mq_fig4.png" alt="Adaptive Control" style="width: 200px;">
+            <div class="text-content">
+                <p>An adaptive control method that can reflect the change in flight dynamics by payload and morphing was designed.</p>
+            </div>
+        </div>
+        
+        <h4>Hardware & Electronics Design</h4>
+        <div class="image-text-row">
+            <img src="assets/mq_project/mq_fig5.png" alt="Hardware & Electronics Design" style="width: 200px;">
+            <div class="text-content">
+                <p>Pixhawk4 mini was used as the flight controller, and Nvidia Jetson Nano was used as an onboard computer to calculate optimal morphology and to control the Dynamixel servo motors. Opengrab Electro Permanent Magnet Gripper was used for payload gripping. The frame and other mechanical parts were made by carbon fiber machining and 3D printing.</p>
+            </div>
+        </div>
+    </div>
+</details>
+
+<details class="project-item">
+    <summary>
+        <img src="https://img.youtube.com/vi/N0fmTzu6km4/mqdefault.jpg" alt="" class="thumbnail">
+        <span class="title">Underwater Ecosystem Simulator with Natural Selection and Evolution</span>
+    </summary>
+    <div class="project-content">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/N0fmTzu6km4" title="Underwater Ecosystem 1" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/8RevBiujdBI" title="Underwater Ecosystem 2" allowfullscreen></iframe>
+        </div>
+        <p>This is a Unity project for simulating underwater ecosystem.</p>
+        
+        <img src="assets/fish_project/fish_fig1.png" alt="Fish Simulator" class="project-image">
+        
+        <h4>Project Detail</h4>
+        <ul>
+            <li>Dynamics and energy consumption modeling of fish</li>
+            <li>Navigation and Control</li>
+            <li>Obstacle avoidance using sampling based path planning</li>
+            <li>Flocking behavior</li>
+            <li>Preferred habitat</li>
+            <li>Growth and Death (aged, starved, preyed)</li>
+            <li>Predation</li>
+            <li>Mating and Reproduction</li>
+            <li>Inheritable gene and mutation</li>
+        </ul>
+    </div>
+</details>
+
+<details class="project-item">
+    <summary>
+        <img src="https://img.youtube.com/vi/lgHbKAFs7ao/mqdefault.jpg" alt="" class="thumbnail">
+        <span class="title">ROLAND: Robust Landing of UAV on Moving Platform</span>
+    </summary>
+    <div class="project-content">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/lgHbKAFs7ao" title="ROLAND" allowfullscreen></iframe>
+        </div>
+        <p>This project is part of a project developing a "Robot System for Patrol and Inspection of Underground Power Transmission Tunnels." UAV needed to land on the moving ground platform to recharge its battery. I developed ROLAND, a method for robust autonomous landing of UAV on a moving platform.</p>
+        
+        <p>ROLAND is composed of two parts:</p>
+        <ul>
+            <li>EKF that estimates the relative position between the UAV and the moving platform</li>
+            <li>Autonomous landing controller</li>
+        </ul>
+        
+        <h4>Overall System Design</h4>
+        <img src="assets/roland_project/roland_fig1.png" alt="ROLAND System Design" class="project-image">
+        <ul>
+            <li>Visual-Inertial Odometry (VIO) with VINS-Stereo</li>
+            <li>Object Detection using OpenCV and YOLO network</li>
+        </ul>
+        
+        <h4>Relative Position Estimation</h4>
+        <div class="image-text-row">
+            <img src="assets/roland_project/roland_fig2.png" alt="ROLAND EKF" style="width: 200px;">
+            <div class="text-content">
+                <p>Extended Kalman Filter (EKF) fuses information from various sensors to estimate relative position:</p>
+                <ul>
+                    <li>Visual-Inertial Odometry (VIO)</li>
+                    <li>Object Detection</li>
+                    <li>Depth Camera</li>
+                    <li>Ultra Wide Band (UWB) Sensor</li>
+                    <li>Wheel Encoder</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h4>Autonomous Landing Controller</h4>
+        <img src="assets/roland_project/roland_fig3.png" alt="ROLAND Controller" class="project-image">
+        <p>The controller can track the target and robustly land on it even if the target is moving.</p>
+    </div>
+</details>

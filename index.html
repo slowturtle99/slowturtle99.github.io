@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanyoung Kim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/profile/profile.jpg" alt="Chanyoung Kim" class="profile-image">
+            <div class="header-info">
+                <h1>Chanyoung Kim</h1>
+                <p>slowturtle0909@gmail.com</p>
+                <div class="links">
+                    <a href="https://scholar.google.com/citations?hl=ko&user=d5pc-ngAAAAJ" target="_blank">Google Scholar</a>
+                    <a href="https://youtube.com/@chanyoungkim4645" target="_blank">YouTube</a>
+                    <a href="http://www.linkedin.com/in/chanyoung-kim-71b151243" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/slowturtle99" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div>
+                    <h3>KAIST</h3>
+                    <div class="details">
+                        Major in Electrical Engineering, Minor in Mechanical Engineering<br>
+                        GPA: 4.01 / 4.3
+                    </div>
+                </div>
+                <span class="date">Mar. 2020 – Present</span>
+            </div>
+        </section>
+
+        <div id="experience-container"></div>
+
+        <section>
+            <h2>Publications</h2>
+            <div id="publications-container"></div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div id="projects-container"></div>
+        </section>
+    </div>
+
+    <script>
+        fetch('experience.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('experience-container').innerHTML = html;
+            });
+
+        fetch('publications.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('publications-container').innerHTML = html;
+            });
+
+        fetch('projects.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('projects-container').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

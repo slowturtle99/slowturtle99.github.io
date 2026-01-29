@@ -65,6 +65,15 @@ header {
 
 .links a {
     color: #444;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.links a svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }
 
 /* Sections */
@@ -184,6 +193,19 @@ section h2 {
 }
 
 /* Projects */
+.year-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #888;
+    margin: 24px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.year-header:first-child {
+    margin-top: 0;
+}
+
 .project-item {
     margin-bottom: 16px;
     border: 1px solid #e5e5e5;
